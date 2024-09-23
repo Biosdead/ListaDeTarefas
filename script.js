@@ -81,8 +81,8 @@ function carregarDados() {
 
 function ordenarTarefas() {
     var keys = [];
-    for (let i = 0; i < localStorage.length; i++) {
-        keys.push(localStorage.key(i));
+    for (let i = 0; i < window.localStorage.length; i++) {
+        keys.push(window.localStorage.key(i));
     }
     keys.sort(function(a, b){return a - b});
     return keys;

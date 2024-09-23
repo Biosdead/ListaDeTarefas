@@ -10,7 +10,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 10px;
 }
 
 .container {
@@ -18,7 +19,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    max-width: 400px;
+    width: 100%; /* Tornar responsivo */
     text-align: center;
 }
 
@@ -34,6 +36,7 @@ header {
 h1 {
     color: #333;
     margin-top: 10px;
+    font-size: 24px;
 }
 
 .task-input {
@@ -48,6 +51,7 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    margin-right: 10px;
 }
 
 .task-input button {
@@ -56,7 +60,6 @@ h1 {
     color: white;
     border: none;
     border-radius: 5px;
-    margin-left: 10px;
     cursor: pointer;
     font-size: 16px;
 }
@@ -67,6 +70,7 @@ h1 {
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 ul li {
@@ -89,4 +93,64 @@ ul li button {
 
 ul li button:hover {
     background-color: #c82333;
+}
+
+/* Media queries para tornar o layout responsivo */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .task-input input {
+        font-size: 14px;
+    }
+
+    .task-input button {
+        font-size: 14px;
+    }
+
+    ul li {
+        padding: 8px;
+    }
+
+    ul li button {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .task-input input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .task-input button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    ul li {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    ul li button {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
 }
